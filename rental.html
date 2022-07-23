@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental Search and Form</title>
+    <meta name="author" content="Michelle Alzola">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/indexstyles.css">
+
+</head>
+
+<body>
+
+    <div>
+        <label>Search by Client</label>
+        <input type="text" id="search_ClientName" onkeyup="searchClientName();">
+    </div>
+    <table id="ClientName_results"></table>
+
+    <div id="client_display"></div>
+    
+    <div id="vehicle">
+        <input type="checkbox" name="vehicle" id="compact">
+        <img src="./images/compact.jpg" alt="Compact" width="200">
+        <Label>Compact $15/day</Label>
+        <br>
+        <input type="checkbox" name="vehicle" id="midsize">
+        <img src="./images/midsize.jfif" alt="Mid-size" width="200">
+        <Label>Mid-size $20/day</Label>
+        <br>
+        <input type="checkbox" name="vehicle" id="luxury">
+        <img src="./images/luxury.jfif" alt="Luxury" width="200">
+        <Label>Luxury $35/day</Label>
+        <br>
+        <input type="checkbox" name="vehicle" id="truck">
+        <img src="./images/truck.jpg" alt="Van/Truck" width="200">
+        <Label>Van/Truck $40/day</Label>
+
+        <h2>Options</h2>
+        <input type="checkbox" name="options" id="roof_rack">        
+        <Label>Roof Rack or Bicycle Rack extra $5/day</Label>
+        <br>
+        <input type="checkbox" name="options" id="gps">        
+        <Label>GPS extra $10</Label>
+        <br>
+        <input type="checkbox" name="options" id="child_seat">        
+        <Label>Child Seat free</Label>
+        
+        <br>
+        <br>
+        <input type="number" name="days" id="num_days" min="1" max="30">
+        <Label>Number of Days</Label>
+
+    </div>
+
+    <div>
+        <button class = "submitbutton" onclick="submitOrder();" >Submit</button>
+    </div>
+
+    <div id="invoice">
+
+    </div>
+    
+
+    <script src="./scripts/rentalscripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Dodgy Brakes Car Rental</title>
+        <meta name = "author" content="Michelle Alzola">  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href="./styles/indexstyles.css"> 
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <header>
+                <img src="./images/LOGOrentalcar-07.png" alt="Dodgy Brakes Car Rental" width="200">
+                <h1>Dodgy Brakes Car Rental</h1>
+            </header>
+
+            <main>
+                <h2>Select a Client</h2>                
+                <button id="client_btn" onclick="showClient();">Search Now</button>  
+                <div id="client"></div>
+
+            </main>
+
+            <footer>
+                <p id="displayDateTime"></p>
+            </footer> 
+            <script type="text/javascript" src="./scripts/indexscripts.js"></script>
+            <script type="text/javascript" src="./scripts/rentalscripts.js"></script>
+
+            <script type="text/javascript">
+                var now = new Date();
+                var day = now.getDay();                
+                var date_time = now.getFullYear() + '-' + (now.getMonth()+1) + '-' + now.getDate() + ' ' + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                document.getElementById("displayDateTime").innerHTML = date_time;               
+            </script>
+
+
+        </div>
+        
+    </body>
+</html>
